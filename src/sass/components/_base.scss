@@ -1,7 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import "../variables";
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -20,9 +17,9 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: inherit;
+  font-family: 'roboto', Helvetica, Arial, sans-serif;
   vertical-align: baseline;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -33,6 +30,9 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  background-color: #f2f2f2;
+  font-size: $article-font-size;
+  font-weight: 400;
 }
 
 ol, ul {
@@ -52,4 +52,8 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+h1 {
+  font-weight: 500;
 }

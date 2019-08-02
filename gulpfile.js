@@ -9,6 +9,7 @@ var settings = {
     polyfills: true,
     styles: true,
     svgs: true,
+    fonts: true,
     copy: true,
     reload: true
 };
@@ -33,6 +34,10 @@ var paths = {
     svgs: {
         input: 'src/svg/*',
         output: 'dist/svg/'
+    },
+    fonts: {
+        input: 'src/fonts/*',
+        output: 'dist/fonts/'
     },
     copy: {
         input: 'src/copy/**/*',
@@ -229,6 +234,18 @@ var buildSVGs = function (done) {
 
 };
 
+// Transfer Fonts
+var transferFonts = function (done) {
+
+    // Make sure this feature is activated before running
+    if (!settings.fonts) return done();
+
+    // Optimize SVG files
+    return src(paths.fonts.input)
+        .pipe(dest(paths.fonts.output));
+
+};
+
 // Copy static files into output folder
 var copyFiles = function (done) {
 
@@ -286,6 +303,7 @@ exports.default = series(
         lintScripts,
         buildStyles,
         buildSVGs,
+        transferFonts,
         copyFiles
     )
 );

@@ -1,8 +1,84 @@
-@import "components/base";
+@import "components/base", "fonts", "variables";
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
-.main-wrapper {
-
+header.header-block {
+  background-image: url("../svg/header-image.png");
+  background-size: cover;
+  width: 100%;
+  height: 400px;
 }
 
-.header-block {
+.main-wrapper {
+  width: 100%;
+  max-width: 940px;
+  margin: -80px auto 0;
+  background-color: #ffffff;
+
+  &__heading {
+    padding: 43px 80px 0 80px;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__heading-text {
+    font-size: 30px;
+    position: relative;
+    overflow: visible;
+    padding-bottom: 9px;
+    margin-bottom: 9px;
+    border-bottom: 2px solid $article-border-color;
+
+    &:before {
+      content: url("../svg/star-icon.png");
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      left: -55px;
+    }
+  }
+}
+
+.article {
+  overflow: visible;
+
+  &__date {
+    font-size: 15px;
+    color: $article-light-gray;
+    margin-bottom: 18px;
+    overflow: hidden;
+  }
+
+  &__text {
+    color: $article-dark-gray;
+    margin-bottom: 38px;
+    line-height: 25px;
+
+    &:first-of-type {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text:first-of-type {
+    margin-bottom: 30px;
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow-x: visible;
+
+    .article__text {
+      max-width: 472px;
+    }
+  }
+
+  &__text-image {
+    margin-left: -80px;
+    margin-right: 20px;
+    border: 5px solid $article-border-color;
+    border-left: none;
+  }
 }
