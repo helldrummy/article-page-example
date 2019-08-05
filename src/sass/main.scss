@@ -82,3 +82,227 @@ header.header-block {
     border-left: none;
   }
 }
+
+.article-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 19px 0;
+  border: 2px solid $article-border-color;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 36px;
+
+
+  &__text {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: $article-light-gray;
+
+    i {
+      margin-right: 6px;
+    }
+
+    &:first-of-type {
+      margin-right: 56px;
+    }
+
+    &:nth-last-of-type(2) {
+      margin-right: 61px;
+    }
+
+    &:last-of-type {
+      span {
+        margin-left: 0;
+      }
+    }
+
+    span {
+      font-weight: 500;
+      margin-left: 2px;
+    }
+  }
+}
+
+.comment-avatar {
+  box-sizing: border-box;
+  width: 80px;
+  min-width: 80px;
+  height: 80px;
+  min-height: 80px;
+  border: 2px solid #ebedee;
+  padding: 2px;
+  // TODO: CHECK border-radius VALUE IN PHOTOSHOP
+  border-radius: 6px;
+  margin-right: 27px;
+}
+
+.comments {
+  &__heading {
+    color: $article-dark-gray;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 46px;
+  }
+
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid $article-border-color;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+
+    &__reply-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      color: $article-light-gray;
+      font-size: 15px;
+      line-height: 20px;
+
+      p {
+        display: flex;
+        align-items: center;
+
+        i {
+          margin-right: 6px;
+        }
+      }
+    }
+
+    &__reply-username {
+
+    }
+
+    &__cancel {
+
+    }
+
+    &__wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-bottom: 11px;
+    }
+
+    &__input {
+      box-sizing: border-box;
+      resize: none;
+      min-height: 86px;
+      border: 2px solid #ebedee;
+      // TODO: CHECK border-radius VALUE IN PHOTOSHOP
+      border-radius: 6px;
+      padding: 15px;
+      height: 86px;
+      width: 100%;
+      max-width: 668px;
+      opacity: 0.6;
+      color: #bfbfbf;
+      font-size: 17px;
+
+      &:focus {
+        opacity: 1;
+      }
+    }
+
+    &__submit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-end;
+      width: 100%;
+      max-width: 140px;
+      height: 44px;
+      background-color: $article-button-bg;
+
+      color: $article-dark-gray;
+      font-size: 17px;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      // TODO: CHECK border-radius VALUE IN PHOTOSHOP
+      border-radius: 6px;
+    }
+  }
+}
+
+.comments-list {
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__side-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__comment-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+  }
+
+  &__username {
+    font-weight: 500;
+    line-height: 18px;
+    color: $article-dark-gray;
+    margin-right: 10px;
+  }
+
+  &__publication-date {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $article-light-gray;
+
+    i {
+      margin-right: 6px;
+    }
+  }
+
+  &__content {
+    line-height: 25px;
+    color: $article-dark-gray;
+    margin-bottom: 16px;
+  }
+
+  &__actions-block {
+    margin-bottom: 26px;
+    display: flex;
+    align-items: center;
+
+    font-size: 15px;
+    line-height: 20px;
+    color: $article-light-gray;
+
+    p {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      cursor: pointer;
+
+      &:first-of-type {
+        i {
+          font-weight: 500;
+        }
+      }
+    }
+
+    i {
+      margin-right: 6px;
+    }
+  }
+
+  .comment-form {
+    width: 100%;
+  }
+}

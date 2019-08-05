@@ -43,6 +43,11 @@ blockquote, q {
   quotes: none;
 }
 
+input, textarea {
+  outline: none;
+  padding: 0;
+}
+
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
@@ -56,4 +61,14 @@ table {
 
 h1 {
   font-weight: 500;
+}
+
+//Helper calsses
+.display-none {
+  display: none;
+ }
+
+.far,
+.fas {
+  padding-bottom: 2px;
 }

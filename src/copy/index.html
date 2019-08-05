@@ -3,7 +3,8 @@
 <head>
     <title>Article page</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-
+    <!-- Fontawesome -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
 </head>
 <body>
 <header class="header-block"></header>
@@ -52,9 +53,76 @@
                 proceed six parlors. Her say projection age announcing decisively men.
             </p>
         </article>
+        <div class="article-info">
+            <P class="article-info__text">
+                <i class="fas fa-user"></i> Post by <span>Will Smith</span>
+            </P>
+
+            <P class="article-info__text">
+                <i class="far fa-clock"></i> Posted <span>June 18, 2015 at  21:14</span>
+            </P>
+
+            <P class="article-info__text">
+                <i class="fas fa-comment"></i> <span>12 comments</span>
+            </P>
+        </div>
+        <section class="comments">
+            <!-- Block for commenting by current user -->
+            <div class="user-comment">
+                <h2 class="comments__heading">
+                    Leave comment:
+                </h2>
+
+                <form action="post" class="comment-form">
+                    <label class="display-none"></label>
+                    <div class="comment-form__wrapper">
+                        <img src="svg/user-avatar_1.png" alt="user avatar" class="comment-avatar">
+                        <textarea placeholder="Your  Message" class="comment-form__input"></textarea>
+                    </div>
+                    <input class="comment-form__submit" type="submit" value="Send">
+                </form>
+            </div>
+
+            <!-- Block with list of all comments -->
+            <div class="comments-list">
+                <div class="comments-list__item">
+                    <img src="svg/user-avatar_1.png" alt="user avatar" class="comment-avatar">
+
+                    <div class="comments-list__side-block">
+                        <div class="comments-list__info-block">
+                            <div class="comments-list__comment-info">
+                                <p class="comments-list__username">Kurt Thompson</p>
+                                <p class="comments-list__publication-date">
+                                    <i class="far fa-clock"></i> 2015-07-06 at 13:57
+                                </p>
+                            </div>
+                            <p class="comments-list__content">
+                                If not everyone makes money blogging, why is blogging so popular?
+                            </p>
+                            <div class="comments-list__actions-block">
+                                <p><i class="fas fa-edit"></i>Edit</p>
+                                <p><i class="fas fa-times"></i> Delete</p>
+                                <p><i class="fas fa-reply"></i> Reply</p>
+                            </div>
+                        </div>
+                        <!-- Showing this block when user is replying -->
+                        <form action="post" class="comment-form">
+                            <div class="comment-form__reply-block">
+                                <p class="comment-form__reply-username"><i class="fas fa-reply"></i> Kurt Thompson</p>
+                                <p class="comment-form__cancel"><i class="fas fa-times"></i> Cancel</p>
+                            </div>
+                            <label class="display-none"></label>
+                            <div class="comment-form__wrapper">
+                                <textarea placeholder="Your  Message" class="comment-form__input"></textarea>
+                            </div>
+                            <input class="comment-form__submit" type="submit" value="Send">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </section>
-
 <!-- Scripts -->
 <script src="js/detects.js"></script>
 <script src="js/main.polyfills.js"></script>
